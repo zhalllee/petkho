@@ -1,0 +1,38 @@
+/* =====================================================================
+   ADMIN LAYOUT  (includes/style/admin.css)
+   Loaded by adminHeader.php AFTER style.css, so buttons, forms and tables
+   already look like the shop. This file only adds the sidebar and panels.
+   ===================================================================== */
+body { background-color: #fff0e3; }
+
+.admin-side { background: #6e0a4a;   flex: 0 0 240px; width: 240px; }
+.admin-side a {
+    color: #fff; text-decoration: none; display: block;
+    padding: .65rem 1.25rem; margin: .1rem .75rem; border-radius: 999px; font-weight: 600; font-size: .95rem;
+}
+.admin-side a:hover { background: rgba(255, 255, 255, .15); color: #fff; }
+.admin-side a.active { background: var(--pk-orange-dk); color: #fff; }
+.admin-side .brand {
+    display: flex; flex-direction: column; align-items: center; gap: .4rem; text-align: center;
+    color: #fff; font-family: var(--pk-heading); font-size: 1.5rem; font-weight: 600; padding: 1.5rem 1.25rem .35rem;
+}
+.admin-side .brand img { width: 72px; height: 72px; object-fit: contain; }
+.admin-side .who { color: #f6d3e5; font-size: .8rem; padding: 0 1.25rem 1.25rem; word-break: break-all; text-align: center; }
+
+.page-title, .section-title { color: var(--pk-plum); }
+.section-title { margin-top: .5rem; }
+
+.panel {
+    background: #fff; border: 1px solid var(--pk-line); border-radius: 1.25rem;
+    padding: 1.25rem; box-shadow: 0 .25rem 1rem rgba(151, 11, 102, .08);
+}
+.panel.p-0 { overflow: hidden; }
+
+/* scrollable table box. Must be ".panel.scroll-table" so it beats ".panel.p-0 { overflow: hidden }" above */
+.panel.scroll-table { max-height: 330px; overflow-y: auto; }
+
+.thumb { width: 48px; height: 48px; object-fit: cover; border-radius: .6rem; }
+
+@media (max-width: 767px) { .admin-side { width: 100%; flex-basis: auto; } }
+
+
